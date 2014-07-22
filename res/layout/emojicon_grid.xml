@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013 Klamr. All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of Klamr or one of its
+  ~ subsidiaries. You shall not disclose this confidential information and shall use it only in
+  ~ accordance with the terms of the license agreement or other applicable agreement you entered into
+  ~ with Klamr.
+  ~
+  ~ KLAMR MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER
+  ~ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. KLAMR SHALL NOT BE LIABLE FOR ANY LOSSES
+  ~ OR DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR
+  ~ ITS DERIVATIVES.
+
+
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Emoji_GridView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:cacheColorHint="@android:color/transparent"
+    android:columnWidth="40dip"
+    android:horizontalSpacing="5dip"
+    android:numColumns="auto_fit"
+    android:scrollbars="vertical"
+    android:verticalSpacing="5dip" />
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/face_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff0f0f0"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"  >
+
+
+        <com.rockerhieu.emojicon.CirclePageIndicator
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="10dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/emoji_child_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="120.0dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="#0000"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" />
+    </LinearLayout>
